@@ -70,7 +70,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Loader type='pacman'/>
+      <Loader type="pacman" />
     </>
   );
 };
