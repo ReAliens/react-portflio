@@ -2,12 +2,12 @@ import './index.scss';
 import { useEffect, useState } from 'react';
 import AnimatedLetters from '../../components/AnimatedLetters';
 import {
-  faFonticons,
   faCss3,
   faGitAlt,
   faHtml5,
   faJs,
   faReact,
+  faSass,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Loader from 'react-loaders';
@@ -50,7 +50,7 @@ const About = () => {
         <div className="stage-cube-cont">
           <div className="cubespinner">
             <div className="face1">
-              <FontAwesomeIcon icon={faFonticons} color="#fff" />
+              <FontAwesomeIcon icon={faSass} color="#CD6799" />
             </div>
             <div className="face2">
               <FontAwesomeIcon icon={faHtml5} color="#F06529" />

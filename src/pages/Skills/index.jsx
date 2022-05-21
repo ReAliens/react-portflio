@@ -4,6 +4,8 @@ import './index.scss';
 import { useEffect, useState } from 'react';
 import AnimatedLetters from '../../components/AnimatedLetters';
 import Loader from 'react-loaders';
+import fontAwesomeData from '../constants/skillsIconFA';
+import AnimatedSkillSIcons from '../../components/AnimatedSkills';
 
 const Skills = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
@@ -19,7 +21,7 @@ const Skills = () => {
       <div id="stars"></div>
       <div id="stars2"></div>
       <div id="stars3"></div>
-      <div className="container about-page">
+      <div className="skills-page">
         <div className="text-zone">
           <h1>
             <AnimatedLetters
@@ -30,7 +32,7 @@ const Skills = () => {
           </h1>
           <p>
             Expert in front-end development including technologies like
-            <span className="tech-tag">HTML5 </span>,
+            <span className="tech-tag"> HTML5 </span>,
             <span className="tech-tag">CSS3 </span>,
             <span className="tech-tag">JavaScript </span>,
             <span className="tech-tag">React </span>,
@@ -45,7 +47,7 @@ const Skills = () => {
             .
             <br />
             Also have learned some of back-end techs such as
-            <span className="tech-tag">Ruby </span>,
+            <span className="tech-tag"> Ruby </span>,
             <span className="tech-tag">Ruby on Rails </span>,
             <span className="tech-tag">Postgresql </span>.
           </p>
@@ -60,7 +62,15 @@ const Skills = () => {
         </div>
       </div>
 
-      <Loader type="pacman" />
+      <div class="tips-logo-cont">
+        <ul>
+          {fontAwesomeData.map((item) => (
+            <AnimatedSkillSIcons data={item} />
+          ))}
+        </ul>
+      </div>
+
+      {/* <Loader type="pacman" /> */}
     </div>
   );
 };
