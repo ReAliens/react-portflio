@@ -3,8 +3,7 @@ import './index.scss';
 import './index.scss';
 import { useEffect, useState } from 'react';
 import AnimatedLetters from '../../components/AnimatedLetters';
-import Loader from 'react-loaders';
-import fontAwesomeData from '../constants/skillsIconFA';
+import fontAwesomeData from '../../constants/skillsIconFA';
 import AnimatedSkillSIcons from '../../components/AnimatedSkills';
 
 const Skills = () => {

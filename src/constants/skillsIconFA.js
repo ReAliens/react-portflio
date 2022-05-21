@@ -64,6 +64,12 @@ const fontAwesomeData = [
     style: { width: '100px', height: '100px' },
     alt: 'postgresql',
   },
+  {
+    type: 'image',
+    icon: './assets/images/graphql.svg',
+    style: { width: '100px', height: '100px' },
+    alt: 'graphql',
+  },
 ];
 
 export default fontAwesomeData;

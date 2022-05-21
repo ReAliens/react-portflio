@@ -116,8 +116,13 @@
                 margin: auto;
                 text-decoration: none;
 
-                img {
-                    transition: all 0.3s ease-out;
+                svg{
+                    height: 30px;
+                    width: 30px;
+                }
+
+                &:hover svg {
+                    color: #ffd700;
                 }
             }
         }

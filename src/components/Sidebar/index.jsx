@@ -1,7 +1,12 @@
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './index.scss';
-import { faHome, faUser, faEnvelope, faGear } from '@fortawesome/free-solid-svg-icons';
+import {
+  faHome,
+  faUser,
+  faEnvelope,
+  faGear,
+} from '@fortawesome/free-solid-svg-icons';
 import {
   faGithub,
   faAngellist,
@@ -48,7 +53,7 @@ const Sidebar = () => {
             href="https://angel.co/u/ahmed-reda-19"
             className="angellist-link"
           >
-            <FontAwesomeIcon icon={faAngellist} />
+            <FontAwesomeIcon icon={faAngellist} color="#fff" />
           </a>
         </li>
         <li>
@@ -58,7 +63,7 @@ const Sidebar = () => {
             href="https://www.linkedin.com/in/armali/"
             className="linkedin-link"
           >
-            <FontAwesomeIcon icon={faLinkedin} />
+            <FontAwesomeIcon icon={faLinkedin} color="#fff" />
           </a>
         </li>
         <li>
@@ -68,7 +73,7 @@ const Sidebar = () => {
             href="https://github.com/ReAliens"
             className="github-link"
           >
-            <FontAwesomeIcon icon={faGithub} />
+            <FontAwesomeIcon icon={faGithub} color="#fff" />
           </a>
         </li>
       </ul>
