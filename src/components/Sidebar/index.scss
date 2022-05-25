@@ -89,6 +89,12 @@
             }
         }
 
+        a.history-link {
+            &:after {
+                content: "History";
+            }
+        }
+
         a.active {
             svg {
                 color: #ffd700;

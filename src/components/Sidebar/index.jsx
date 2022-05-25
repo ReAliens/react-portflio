@@ -6,6 +6,7 @@ import {
   faUser,
   faEnvelope,
   faGear,
+  faHistory,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faGithub,
@@ -35,6 +36,14 @@ const Sidebar = () => {
           to="/skills"
         >
           <FontAwesomeIcon icon={faGear} color="#4d4d4e" />
+        </NavLink>
+        <NavLink
+          exact="true"
+          activeclassname="active"
+          className="history-link"
+          to="/history"
+        >
+          <FontAwesomeIcon icon={faHistory} color="#4d4d4e" />
         </NavLink>
         <NavLink
           exact="true"
