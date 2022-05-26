@@ -8,13 +8,17 @@ import AnimatedSkillSIcons from '../../components/AnimatedSkills';
 
 const Skills = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
+  const [loading, setLoading] = useState(true);
   const skillsArr = ['Skills', ' ', ' & ', 'Experience'];
 
   useEffect(() => {
     setTimeout(() => {
       setLetterClass('text-animate-hover');
     }, 3000);
-  });
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, [loading]);
   return (
     <div className="stage">
       <div id="stars"></div>
@@ -61,11 +65,12 @@ const Skills = () => {
         </div>
       </div>
 
-      <div class="tips-logo-cont">
+      <div className="tips-logo-cont">
         <ul>
-          {fontAwesomeData.map((item) => (
-            <AnimatedSkillSIcons data={item} />
-          ))}
+          {!loading &&
+            fontAwesomeData.map((item) => (
+              <AnimatedSkillSIcons key={item.id} data={item} />
+            ))}
         </ul>
       </div>
 

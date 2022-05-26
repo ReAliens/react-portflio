@@ -16,15 +16,20 @@ import {
 
 const Sidebar = () => {
   return (
-    <div className="nav-bar">
-      <nav>
-        <NavLink exact="true" activeclassname="active" to="/">
+    <div className="nav-bar bg-navBar flex justify-center w-full  lg:w-[70px] lg:h-full top-0 lg:absolute z-30">
+      <nav className="flex px-7 w-full sm:w-1/2 justify-around lg:w-full lg:block lg:text-center lg:absolute lg:h-[210px] top-1/2 lg:mt-[-120px] text-[22px] ">
+        <NavLink
+          exact="true"
+          activeclassname="active"
+          to="/"
+          className="lg:block"
+        >
           <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
         </NavLink>
         <NavLink
           exact="true"
           activeclassname="active"
-          className="about-link"
+          className="about-link lg:block"
           to="/about"
         >
           <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
@@ -32,7 +37,7 @@ const Sidebar = () => {
         <NavLink
           exact="true"
           activeclassname="active"
-          className="skills-link"
+          className="skills-link lg:block"
           to="/skills"
         >
           <FontAwesomeIcon icon={faGear} color="#4d4d4e" />
@@ -40,7 +45,7 @@ const Sidebar = () => {
         <NavLink
           exact="true"
           activeclassname="active"
-          className="history-link"
+          className="history-link lg:block"
           to="/history"
         >
           <FontAwesomeIcon icon={faHistory} color="#4d4d4e" />
@@ -48,19 +53,19 @@ const Sidebar = () => {
         <NavLink
           exact="true"
           activeclassname="active"
-          className="contact-link"
+          className="contact-link lg:block"
           to="/contact"
         >
           <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
         </NavLink>
       </nav>
-      <ul>
+      <ul className="flex lg:absolute lg:bottom-[20px] lg:block p-0 text-center my-0 mx-auto list-none">
         <li>
           <a
             target="_blank"
             rel="noreferrer"
             href="https://angel.co/u/ahmed-reda-19"
-            className="angellist-link"
+            className="angellist-link lg:m-auto lg:block"
           >
             <FontAwesomeIcon icon={faAngellist} color="#fff" />
           </a>
@@ -70,7 +75,7 @@ const Sidebar = () => {
             target="_blank"
             rel="noreferrer"
             href="https://www.linkedin.com/in/armali/"
-            className="linkedin-link"
+            className="linkedin-link lg:m-auto lg:block"
           >
             <FontAwesomeIcon icon={faLinkedin} color="#fff" />
           </a>
@@ -80,7 +85,7 @@ const Sidebar = () => {
             target="_blank"
             rel="noreferrer"
             href="https://github.com/ReAliens"
-            className="github-link"
+            className="github-link lg:m-auto lg:block"
           >
             <FontAwesomeIcon icon={faGithub} color="#fff" />
           </a>

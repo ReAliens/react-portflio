@@ -507,6 +507,8 @@
         li {
             display: inline-block;
             margin: 0 15px;
+            animation: bounceIn 1.5s;
+            animation-fill-mode: forwards;
             svg {
                 cursor: pointer;
                 transition-duration: 0.8s;
@@ -531,3 +533,4 @@
         }
     }
 }
+
