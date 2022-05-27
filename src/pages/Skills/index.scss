@@ -29,14 +29,16 @@
     }
 
     p {
-        @include responsive(md) {
+        @include responsive(lg) {
             font-size: 12px;
         }
         font-size: 18px;
         color: #fff;
         font-family: "sans-serif";
         font-weight: 300;
-        min-width: "fit-content";
+        // min-width: "fit-content";
+        width: 100%;
+        padding: 0 20px;
         animation: pulse 1s;
 
         &:nth-of-type(1) {
@@ -475,7 +477,7 @@
         display: grid;
         width: 80%;
         height: 60%;
-        grid-template-columns: repeat(4, minmax(120px, 0.5fr));
+        grid-template-columns: repeat(3, minmax(120px, 0.5fr));
         gap: 10px;
         padding: 40px 60px;
         justify-content: center;
@@ -500,7 +502,7 @@
                 }
             }
 
-            img {
+            img {  
                 @include responsive(xl) {
                     width: 60px;
                     height: 60px;

@@ -28,7 +28,7 @@ const Skills = () => {
       {!loading && (
         <>
           <div className="skills-page grid grid-rows-2 lg:grid-cols-2 justify-center w-full h-[100%] px-7">
-            <div className="flex flex-col justify-center lg:pl-28  lg:h-[100vh] lg:w-full ">
+            <div className="flex flex-col top-[20%] lg:static lg:justify-center fixed h-[100%] lg:pl-28  lg:h-[100vh] w-full ">
               <h1 className="text-[30px] lg:text-[55px] text-main font-medium mt-0 mb-[40px] relative left-[10px] ">
                 <AnimatedLetters
                   strArr={skillsArr}
@@ -67,7 +67,7 @@ const Skills = () => {
                 your project.
               </p>
             </div>
-            <div className="tips-logo-cont flex justify-center items-center w-full h-[50vh] lg:w-1/2 lg:h-full lg:top-0 lg:ml-[20px] lg:absolute lg:right-0">
+            <div className="tips-logo-cont w-full flex fixed top-[50%] lg:static justify-center lg:items-center lg:h-full lg:ml-[20px]">
               <ul>
                 {fontAwesomeData.map((item) => (
                   <AnimatedSkillSIcons key={item.id} data={item} />
