@@ -1,23 +1,8 @@
+@import "../../styles/mediaQueries.scss";
+
 .skills-page {
-    .text-zone {
-        position: absolute;
-        left: 10%;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 35%;
-        vertical-align: middle;
-        display: table-cell;
-        max-height: 90%;
-    }
     h1 {
-        font-size: 55px;
         font-family: "Coolvetica";
-        color: #ffd700;
-        font-weight: 400;
-        margin-top: 0;
-        position: relative;
-        margin-bottom: 40px;
-        left: 10px;
 
         &::before {
             content: "<h1>";
@@ -44,7 +29,10 @@
     }
 
     p {
-        font-size: 16px;
+        @include responsive(md) {
+            font-size: 12px;
+        }
+        font-size: 18px;
         color: #fff;
         font-family: "sans-serif";
         font-weight: 300;
@@ -71,10 +59,6 @@
 
 .tech-tag {
     color: #ffd700;
-}
-
-#tsparticles {
-    z-index: 10;
 }
 
 #stars {
@@ -486,30 +470,26 @@
 }
 
 .tips-logo-cont {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    margin-left: 20px;
-    position: absolute;
-    right: 0;
-
     ul {
         list-style: none;
         display: grid;
-        grid-template-columns: repeat(4, 25%);
-        gap: 20px;
+        width: 80%;
+        height: 60%;
+        grid-template-columns: repeat(4, minmax(120px, 0.5fr));
+        gap: 10px;
+        padding: 40px 60px;
         justify-content: center;
         align-items: center;
 
         li {
-            display: inline-block;
             margin: 0 15px;
             animation: bounceIn 1.5s;
             animation-fill-mode: forwards;
             svg {
+                @include responsive(xl) {
+                    width: 60px;
+                    height: 60px;
+                }
                 cursor: pointer;
                 transition-duration: 0.8s;
                 width: 100px;
@@ -521,6 +501,10 @@
             }
 
             img {
+                @include responsive(xl) {
+                    width: 60px;
+                    height: 60px;
+                }
                 cursor: pointer;
                 transition-duration: 0.8s;
                 width: 100px;
@@ -533,4 +517,3 @@
         }
     }
 }
-

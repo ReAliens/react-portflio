@@ -9,7 +9,7 @@ const AnimatedSkillSIcons = ({ data }) => {
         {data?.type === 'icon' ? (
           <FontAwesomeIcon icon={data?.icon} color={data?.color} />
         ) : (
-          <img src={data?.icon} alt={data?.alt} style={data?.style} />
+          <img src={data?.icon} alt={data?.alt} />
         )}
       </Tilt>
     </li>
