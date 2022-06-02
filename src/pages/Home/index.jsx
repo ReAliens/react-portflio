@@ -32,6 +32,9 @@ const Home = () => {
   return (
     <>
       <div className="container home-page">
+        <div className="sunshine">
+          <div className="sun"></div>
+        </div>
         <div className="text-zone">
           <h1>
             <span className={letterClass}>H</span>
@@ -59,7 +62,21 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <Loader type='ball-pulse'/>
+      <Loader type="ball-pulse" />
+      <div className="area">
+        <ul className="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
     </>
   );
 };
