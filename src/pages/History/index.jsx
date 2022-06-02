@@ -1,5 +1,3 @@
-// import { useEffect, useState } from 'react';
-// import AnimatedLetters from '../../components/AnimatedLetters';
 import WorkCard from '../../components/WorkCard';
 import workHistory from '../../constants/history';
 import './index.scss';
@@ -15,6 +13,7 @@ const History = () => {
               image={item.image}
               sourceLink={item?.sourceLink}
               liveLink={item.liveLink}
+              title={item.title}
             />
           ))}
         </ul>

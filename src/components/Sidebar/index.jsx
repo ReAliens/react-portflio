@@ -16,7 +16,7 @@ import {
 
 const Sidebar = () => {
   return (
-    <div className="nav-bar bg-navBar flex justify-center w-full  lg:w-[70px] lg:h-full top-0 lg:absolute z-30">
+    <div className="nav-bar bg-navBar flex justify-center w-full  lg:w-[90px] lg:h-full top-0 lg:absolute z-30">
       <nav className="flex px-7 w-full sm:w-1/2 justify-around lg:w-full lg:block lg:text-center lg:absolute lg:h-[210px] top-1/2 lg:mt-[-120px] text-[22px] ">
         <NavLink
           exact="true"

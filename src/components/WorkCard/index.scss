@@ -1,6 +1,6 @@
 .history-item {
     width: 100%;
-    height: 240px;
+    height: 300px;
     flex: 1 1 auto;
     display: flex;
     align-items: center;
@@ -8,34 +8,78 @@
     border: 1px solid black;
     overflow: hidden;
     position: relative;
-    margin-left: 50px;
+    padding: 0 20px;
 
-    &:hover {
-        cursor: pointer;
-        & .background-image {
-            opacity: 0.6;
-            transform: scale(1.1);
-            transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-        }
-        &.content {
-            opacity: 0.9;
-        }
-    }
-
-    .background-image {
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        background-position: center;
-        background-size: cover;
+        background: rgba(0, 0, 0, 0);
+        transition: background 0.5s ease;
     }
 
-    .content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid black;
-        background-color: oldlace;
-        opacity: 0.6;
+    &:hover .overlay {
+        display: block;
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    img {
         position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+    }
+
+    .title {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 120px;
+        font-weight: 700;
+        font-size: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffd700;
+        z-index: 1;
+        transition: top 1s ease;
+        cursor: pointer;
+        text-align: center;
+        opacity: 0;
+    }
+
+    &:hover .title {
+        top: 90px;
+        opacity: 1;
+    }
+
+    .link-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        left:0;
+        top: 180px;
+        opacity: 0;
+        transition: opacity 0.35s ease;
+        a {
+            width: 30%;
+            padding: 12px 20px;
+            text-align: center;
+            color: white;
+            border: solid 1px #ffd700;
+            z-index: 1;
+
+            svg {
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+
+    &:hover .link-container {
+        opacity: 1;
     }
 }

@@ -37,8 +37,8 @@ const Contact = () => {
   };
   return (
     <>
-      <div className="container contact-page">
-        <div className="text-zone">
+      <div className="contact-page grid grid-rows-2 lg:grid-cols-2 gap-10 justify-center items-center w-full h-full px-7">
+        <div className="text-zone flex flex-col lg:h-[100vh] sticky w-full justify-center top-[12%] lg:pl-28 lg:px-10 lg:ml-16 ">
           <h1>
             <AnimatedLetters
               strArr={contactArr}
@@ -88,6 +88,7 @@ const Contact = () => {
             </form>
           </div>
         </div>
+        <div className="map-wrap w-full h-full lg:h-[80vh] flex top-[5%] lg:top-[10%] text-center lg:items-center lg:sticky relative justify-center m-auto">
         <div className="info-map">
           Ahmed Reda,
           <br />
@@ -97,7 +98,6 @@ const Contact = () => {
           <br />
           <span>freelancers ahmedreda152@gmail.com</span>
         </div>
-        <div className="map-wrap">
           <MapContainer center={[29.9803305, 31.1555563]} zoom={13}>
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
